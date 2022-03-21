@@ -1,7 +1,15 @@
 <h1>Books</h1>
-<h5>Title</h5>
-<h5>Body</h5>
+
+<% @books.each do |book| %>
+  <h5>Title</h5>
+  <span><%= book.title %></span>
+  <h5>Body</h5>
+  <span><%= book.body %></span>
+  
+  <%= link_to  "Show", book_path %>
+  <%= link_to "Edit", edit_book_path(@book.id) %>
  
+<% end %>
 
 <h3>New book</h3>
 <%= form_with model: Book.new do |f| %>

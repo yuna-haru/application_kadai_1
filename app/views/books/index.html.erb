@@ -6,10 +6,13 @@
   <h5>Body</h5>
   <span><%= book.body %></span>
   
-  <%= link_to  "Show", book_path %>
-  <%= link_to "Edit", edit_book_path(@book.id) %>
+  
+  <%= link_to  "Show", book_path(book.id) %>
+  <%= link_to "Edit", edit_book_path(book.id) %>
+  <%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
  
-<% end %>
+ <% end %>
+
 
 <h3>New book</h3>
 <%= form_with model: Book.new do |f| %>

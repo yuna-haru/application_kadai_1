@@ -20,9 +20,11 @@
   box-sizing: border-box;
 }
 
-.heading, th, p {
+
+.heading, th, p, .flash {
   font-family: verdana, arial, helvetica, sans-serif;
-  margin: 33px;
+  margin:33px;
+  font-size: 13px;
 }
 
 .box {
@@ -40,6 +42,25 @@ th, td {
  margin-bottom: 7px;
 }
 .flash {
-  margin: 33px;
   color: green;
+}
+.error {
+  width: 450px;
+  border: 2px solid red;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+.error_text {
+  font-size: 12px;
+  padding: 5px 5px 5px 15px;
+  background-color: red;
+  color: #fff;
+}
+ul {
+  margin-left: 33px;
+  padding: 33px;
+  list-style: square;
+}
+.link {
+  color: #000;
 }
